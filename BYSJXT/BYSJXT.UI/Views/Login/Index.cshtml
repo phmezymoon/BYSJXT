@@ -1,0 +1,217 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/ext4.2/resources/css/ext-all.css" rel="stylesheet" type="text/css" />
+    <script src="~/Content/ext4.2/ext-lang-zh_CN.js" type="text/javascript"></script>
+    <script src="~/Content/ext4.2/bootstrap.js" type="text/javascript"></script>
+    <script src="~/Content/ext4.2/ext-all.js" type="text/javascript"></script>
+    <script src="~/Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <title>用户登陆-合肥工业大学</title>
+
+    <script  type="text/javascript">
+        Ext.onReady(function () {
+            Ext.QuickTips.init();
+
+            var topimage = new Ext.Panel({
+                collapsible: false,
+                //  html: '<br><center><font size = 6>毕业设计选题管理系统</font></center>',
+                html: '<img src="Images/gb1.jpg"/>',
+                margins: '5 5 5 5',
+                region: 'north', //指定子面板所在区域为north
+                height: 100
+            });
+
+            var loginForm = new Ext.form.Panel({
+                region: 'west',
+                title: '用户登录', //表单标题
+                width: 220, //表单宽度
+                height: 250,
+                split: true,
+                collapsible: true,
+                margins: '3 0 3 3',
+                cmargins: '3 3 3 3',
+                frame: true, //是否渲染表单 True 为 Panel 填充画面
+                defaults: {//统一设置表单字段默认属性
+                    labelSeparator: '：', //分隔符
+                    labelWidth: 55, //标签宽度
+                    width: 190, //字段宽度
+                    allowBlank: false, //是否允许为空
+                    blankText: '不允许为空',
+                    labelAlign: 'right', //标签对齐方式
+                    msgTarget: 'qtip'          //显示一个浮动的提示信息
+                },
+                items: [{
+                    xtype: 'radiogroup',
+                    columns: 3, //3列
+                    items: [
+					    { boxLabel: '学生', name: 'logoradio', inputValue: '学生' },
+					    { boxLabel: '学院', name: 'logoradio', inputValue: '学院' },
+                        { boxLabel: '学校', name: 'logoradio', inputValue: '学校', checked: true }
+				    ]
+                }, {
+                    xtype: 'textfield',
+                    fieldLabel: '登录名',
+                    id: 'username',
+                    name: 'username',
+                    value: ''
+                }, {
+                    xtype: 'textfield',
+                    fieldLabel: '密码',
+                    inputType: 'password',
+                    id: 'password',
+                    name: 'password',
+                    value: ''
+                }, // {
+                //                    xtype: 'textfield',
+                //                    fieldLabel: '验证码',
+                //                    value: '',
+                //                    id: 'vertify'
+                //                }, {
+
+                //                    xtype: 'textfield',
+                //                    fieldLabel: '点击更换',
+                //                    cls: 'key',
+                //                    name: 'chknumber',
+                //                    id: 'randCode',
+                //                    frame: true,
+                // border:false,
+
+                //                    fieldLabel: '点击更换',
+                //                    maxLength: 4,
+                //                    width: 40,
+                //                    html: '<img src="images/gb11.jpg"/>',
+                //                    html: '<a href="javascript:void(0)" onclick="changeCheckCode();return false;" >看不清，换一张</a>',
+
+
+                //                    allowBlank: false,
+                //                    blankText: '验证码不能为空!'},
+                {
+                buttonAlign: 'center',
+                border: false,
+                buttons: [{
+                    text: '登录',
+                    height: 25,
+                    handler: login
+                }]
+            }]
+
+
+
+        });
+
+        function login() {//提交表单
+            loginForm.getForm().submit({
+                clientValidation: true, //进行客户端验证
+                url: '/Login/TeacherLogin', //请求的url地址
+                method: 'POST', //请求方式
+                success: function (form, action) {//加载成功的处理函数
+                    window.location.href = "/Menu";
+                },
+                failure: function (form, action) {//加载失败的处理函数
+                    var msg = action.result.msg;
+                    if (msg == "无权限") {
+                        Ext.Msg.alert('提示', '登陆失败，该账号没有进入此子系统的权限！');
+                    } else if (msg == "账号或密码错误") {
+                        Ext.Msg.alert('提示', '登陆失败，账号或密码错误！');
+                    }
+                    
+                }
+            });
+
+
+        }
+
+        Ext.Ajax.request({
+            url: '/InfoRelease/GetReleaseNotice',
+            type: 'json',
+            success: function (response, option) {
+                var json = Ext.JSON.decode(response.responseText);
+
+                Ext.getCmp("noticeContent").setValue(json.rows[0].noticeContent);
+
+            },
+            failure: function () {
+                Ext.Msg.alert("提示!", "读取数据失败！");
+            }
+        });
+
+        var noticePanel = new Ext.form.Panel({
+            border: true,
+            labelWidth: 1,
+            title: "公告",
+            border: false,
+            frame: true,
+            items: [{
+                xtype: 'textarea',
+                height: 200,
+                readOnly: true,
+                id: 'noticeContent',
+                anchor: '99%'
+            }]
+        });
+
+        var tabs = new Ext.TabPanel({
+            region: 'center',
+            margins: '3 3 3 3',
+            activeTab: 0,
+            defaults: { autoScroll: true },
+            items: [{
+                title: '首页',
+                layout: 'anchor',
+                anchor: '-0 -120',
+                items: [{
+                    layout: 'column',
+                    items: [{
+                        name: 'news',
+                        columnWidth: .68,
+                        title: '新闻动态',
+                        height: 500
+                        // html: '<iframe width="100%" height="500px" frameborder="0" scrolling="no"  src="SchoolNews.aspx"></iframe>'
+                    }, { columnWidth: .32,
+                        items: [noticePanel
+//                                                    {
+//                                                        title: '公告',
+//                                                        height: 200
+//                                                        // html: '<font color=blue>查询</font>'
+//                                                    } 
+                            , {
+                                title: '文档下载'
+                                // html: '<center><iframe width="100%" height="270px" frameborder="0" scrolling="no" src="fd.html"></iframe></center>'
+                            }]
+                    }]
+                }]
+            }]
+
+        });
+
+        var win = new Ext.Viewport({
+            closable: true,
+            width: 840,
+            height: 600,
+            border: false,
+            layout: 'border',
+            items: [topimage, loginForm, tabs]
+        });
+
+        win.show();
+
+
+
+    })
+
+        
+        
+    </script>
+</head>
+<body>
+    <div>
+        
+    </div>
+</body>
+</html>

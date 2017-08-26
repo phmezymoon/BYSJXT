@@ -1,0 +1,17 @@
+D:\ASP.NETProject\BYSJXT\BYSJXT.BLL\bin\Debug\BYSJXT.BLL.dll
+D:\ASP.NETProject\BYSJXT\BYSJXT.BLL\bin\Debug\BYSJXT.BLL.pdb
+D:\ASP.NETProject\BYSJXT\BYSJXT.BLL\bin\Debug\BYSJXT.Common.dll
+D:\ASP.NETProject\BYSJXT\BYSJXT.BLL\bin\Debug\BYSJXT.EFDAL.dll
+D:\ASP.NETProject\BYSJXT\BYSJXT.BLL\bin\Debug\BYSJXT.IBLL.dll
+D:\ASP.NETProject\BYSJXT\BYSJXT.BLL\bin\Debug\BYSJXT.IDAL.dll
+D:\ASP.NETProject\BYSJXT\BYSJXT.BLL\bin\Debug\BYSJXT.Common.pdb
+D:\ASP.NETProject\BYSJXT\BYSJXT.BLL\bin\Debug\BYSJXT.EFDAL.pdb
+D:\ASP.NETProject\BYSJXT\BYSJXT.BLL\bin\Debug\BYSJXT.IBLL.pdb
+D:\ASP.NETProject\BYSJXT\BYSJXT.BLL\bin\Debug\BYSJXT.IDAL.pdb
+D:\ASP.NETProject\BYSJXT\BYSJXT.BLL\obj\Debug\BYSJXT.BLL.csprojResolveAssemblyReference.cache
+D:\ASP.NETProject\BYSJXT\BYSJXT.BLL\obj\Debug\BYSJXT.BLL.dll
+D:\ASP.NETProject\BYSJXT\BYSJXT.BLL\obj\Debug\BYSJXT.BLL.pdb
+D:\ASP.NETProject\BYSJXT\BYSJXT.BLL\bin\Debug\BYSJXT.Model.dll
+D:\ASP.NETProject\BYSJXT\BYSJXT.BLL\bin\Debug\EntityFramework.dll
+D:\ASP.NETProject\BYSJXT\BYSJXT.BLL\bin\Debug\BYSJXT.Model.pdb
+D:\ASP.NETProject\BYSJXT\BYSJXT.BLL\bin\Debug\EntityFramework.xml

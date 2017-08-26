@@ -1,0 +1,209 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+    
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/ext4.2/resources/css/ext-all.css" rel="stylesheet" type="text/css" />
+    <script src="~/Content/ext4.2/ext-lang-zh_CN.js" type="text/javascript"></script>
+    <script src="~/Content/ext4.2/bootstrap.js" type="text/javascript"></script>
+    <script src="~/Content/ext4.2/ext-all.js" type="text/javascript"></script>
+    <script src="~/Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+
+   
+    <script src="~/JS/SelectedSubjectMonitor/UserInfoPreserve.js" type="text/javascript"></script>@*个人信息维护*@
+    @*SelectedSubjectMonitor*@
+    <script src="~/JS/SelectedSubjectMonitor/GetDepartmentTree.js" type="text/javascript"></script>@*获取学院系树*@
+    <script src="~/JS/SelectedSubjectMonitor/GetClassTree.js" type="text/javascript"></script>@*获取学院-班级树*@
+
+    <script src="~/JS/SelectedSubjectMonitor/DeclareSubjectMonitor.js" type="text/javascript"></script>@*申报课题状况监控*@
+    <script src="~/JS/SelectedSubjectMonitor/DeclareSubjectList.js" type="text/javascript"></script>@*查看申报课题清单*@
+    <script src="~/JS/SelectedSubjectMonitor/DeclareSubjectDetail.js" type="text/javascript"></script>@*查看课题详细信息*@
+
+    <script src="~/JS/SelectedSubjectMonitor/CheckSubjectMonitor.js" type="text/javascript"></script>@*审查课题状况监控*@
+    <script src="~/JS/SelectedSubjectMonitor/CheckSubjectList.js" type="text/javascript"></script>@*查看审查课题清单*@
+
+    <script src="~/JS/SelectedSubjectMonitor/TaskBookMonitor.js" type="text/javascript"></script>@*任务书状况监控*@
+
+    <script src="~/JS/SelectedSubjectMonitor/StudentSelectionMonitor.js" type="text/javascript"></script>@*学生选题状况监控*@
+    <script src="~/JS/SelectedSubjectMonitor/StudentSelectionList.js" type="text/javascript"></script>@*学生选题清单*@
+    <script src="~/JS/SelectedSubjectMonitor/GetStudentInfo.js" type="text/javascript"></script>@*获取学生联系方式*@
+
+    <script src="~/JS/SelectedSubjectMonitor/TeacherSelectionMonitor.js" type="text/javascript"></script>@*教师选学生监控*@
+    <script src="~/JS/SelectedSubjectMonitor/TeacherSelectionList.js" type="text/javascript"></script>@*教师选学生明细*@
+
+    <script src="~/JS/SelectedSubjectMonitor/GetAllDeclareSubject.js" type="text/javascript"></script>@*申报课题一览表*@
+
+    <script src="~/JS/SelectedSubjectMonitor/SelectedSubjectMonitor.js" type="text/javascript"></script>@*论文课题一览表*@
+
+    @*ProcessMonitor*@
+    <script src="~/JS/ProcessMonitor/GetOpeningReport.js" type="text/javascript"></script>@*查询开题报告*@
+    <script src="~/JS/ProcessMonitor/OpeningReportDetail.js" type="text/javascript"></script>@*详细开题报告*@
+
+    <script src="~/JS/ProcessMonitor/GetSchedule.js" type="text/javascript"></script>@*查询工作记录*@
+    <script src="~/JS/ProcessMonitor/ScheduleDetail.js" type="text/javascript"></script>@*详细工作记录*@
+
+    <script src="~/JS/ProcessMonitor/GetTranslation.js" type="text/javascript"></script>@*查询论文译文*@
+    <script src="~/JS/ProcessMonitor/TranslationDetail.js" type="text/javascript"></script>@*详细论文译文*@
+
+    <script src="~/JS/ProcessMonitor/GetComment.js" type="text/javascript"></script>@*查询评阅意见*@
+    <script src="~/JS/ProcessMonitor/CommentDetail.js" type="text/javascript"></script>@*详细评阅意见*@
+    <script src="~/JS/ProcessMonitor/UpdateTeacherComment.js" type="text/javascript"></script>@*督导老师提出意见*@
+
+    @*InfoRelease*@
+    <script src="~/JS/InfoRelease/Notice.js" type="text/javascript"></script>@*查找所有公告*@
+    <script src="~/JS/InfoRelease/NoticeDetail.js" type="text/javascript"></script>@*获取公告的内容*@
+    <script src="~/JS/InfoRelease/AddNotice.js" type="text/javascript"></script>@*添加公告*@
+    <script src="~/JS/InfoRelease/UpdateNotice.js" type="text/javascript"></script>@*修改公告*@
+
+    @*SysMaintain*@
+    <script src="~/JS/SysMaintain/AddTeacher.js" type="text/javascript"></script>@*添加教师账号*@
+    <script src="~/JS/SysMaintain/AddStudent.js" type="text/javascript"></script>@*添加学生账号*@
+
+    <script src="~/JS/SysMaintain/UpdateTeacherRole.js" type="text/javascript"></script>@*修改教师权限*@
+    <script src="~/JS/SysMaintain/UpdateTeacherRoleDetail.js" type="text/javascript"></script>
+
+    <title>学校子系统 - 合肥工业大学本科毕业设计管理系统</title>
+
+    <script  type="text/javascript">
+        Ext.onReady(function () {
+
+            //信息发布
+            var menuInfoRelease = new Ext.menu.Menu({
+                items: [
+                {
+                    text: '发布公告',
+                    //disabled: true,
+                    handler: notice
+                }, 
+
+                ]
+            });
+            //系统维护
+            var menuSysMaintain = new Ext.menu.Menu({
+                items: [{
+                    text: '添加教师账号',
+                    handler: addTeacher
+                }, {
+                    text: '添加学生账号',
+                    handler: addStudent
+                }, {
+                    text: '教师权限管理',
+                    handler: updateTeacherRole
+                }]
+            });
+            //选题监控
+            var menuSelectedSubject = new Ext.menu.Menu({
+                items: [{
+                    text: '申报课题状况',
+                    handler: declareSubjectMonitor
+
+                }, {
+                    text: '审查课题状况',
+                    handler: checkSubjectMonitor
+
+                }, {
+                    text: '任务书状况',
+                    handler: taskBookMonitor
+
+                }, {
+                    text: '学生选题状况',
+                    handler: studentSelectionMonitor
+                }, {
+                    text: '教师选学生状况',
+                    handler: teacherSelectionMonitor
+                }, {
+                    text: '申报课题一览表',
+                    handler: getAllDeclareSubject
+                }, {
+                    text: '论文课题一览表',
+                     handler: selectedSubjectMonitor
+                }]
+            });
+            //过程监控
+            var menuProcessMonitor = new Ext.menu.Menu({
+                items: [{
+                    text: '查阅开题报告',
+                    handler: getOpeningReport
+
+                }, {
+                    text: '查阅工作记录',
+                    handler: getSchedule
+
+                }, {
+                    text: '查阅论文译文',
+                    handler: getTranslation
+
+                }, {
+                    text: '查阅评阅意见',
+                    handler: getComment
+                }]
+            });
+
+            //主界面     
+            var tabs = new Ext.tab.Panel({
+                id: 'tabs',
+                border: false,
+                height: "auto",
+                width: "auto",
+                bodyStyle: 'border:none',
+                bodyBorder: false,
+                layoutOnTabChange: true,
+                margins: "0 0 0 0",
+                region: 'center',
+                activeItem: 0
+            });
+            var toolbar = new Ext.toolbar.Toolbar({//创建工具栏
+                region: 'north',
+                items: [{ text: '选题监控', menu: menuSelectedSubject },
+			    { text: '过程监控', menu: menuProcessMonitor },          
+                {
+                    text: '个人信息维护',
+                    handler: userInfoPreserve
+                }, 
+                { text: '人员管理', menu: menuSysMaintain },
+                { text: '信息发布', menu: menuInfoRelease },
+                {
+                    text: '退出系统',
+                    handler:function(){
+                       Ext.MessageBox.confirm('提示', '是否退出系统？', callBack);
+                       function callBack(id) {
+                          if (id == "yes") {
+                             Ext.Ajax.request({
+                                url: '/Login/Logout',
+                                type: 'json',
+                                success: function (response, option) {
+                                    Ext.Msg.alert("提示!", "退出成功！", callBack);
+                                    function callBack(id) {
+                                        if (id == "ok") {
+                                            window.location.href = "/Login";
+                                        }
+                                    }
+                                },
+                                failure: function () {
+                                    Ext.Msg.alert("提示!", "退出失败！");
+                                }
+                            });
+                          }
+                       }
+                            
+                    }
+                }]
+            });
+
+            var vp = new Ext.Viewport({
+                layout: 'border',
+                items: [toolbar, tabs]
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,11 @@
+D:\ASP.NETProject\BYSJXT\BYSJXT.IDAL\bin\Debug\BYSJXT.IDAL.dll
+D:\ASP.NETProject\BYSJXT\BYSJXT.IDAL\bin\Debug\BYSJXT.IDAL.pdb
+D:\ASP.NETProject\BYSJXT\BYSJXT.IDAL\obj\Debug\BYSJXT.IDAL.dll
+D:\ASP.NETProject\BYSJXT\BYSJXT.IDAL\obj\Debug\BYSJXT.IDAL.pdb
+D:\ASP.NETProject\BYSJXT\BYSJXT.IDAL\bin\Debug\BYSJXT.Common.dll
+D:\ASP.NETProject\BYSJXT\BYSJXT.IDAL\bin\Debug\BYSJXT.Model.dll
+D:\ASP.NETProject\BYSJXT\BYSJXT.IDAL\bin\Debug\EntityFramework.dll
+D:\ASP.NETProject\BYSJXT\BYSJXT.IDAL\bin\Debug\BYSJXT.Common.pdb
+D:\ASP.NETProject\BYSJXT\BYSJXT.IDAL\bin\Debug\BYSJXT.Model.pdb
+D:\ASP.NETProject\BYSJXT\BYSJXT.IDAL\bin\Debug\EntityFramework.xml
+D:\ASP.NETProject\BYSJXT\BYSJXT.IDAL\obj\Debug\BYSJXT.IDAL.csprojResolveAssemblyReference.cache

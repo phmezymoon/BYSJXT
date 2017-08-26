@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net" default-autowire="constructor">
+
+  <object name="TeacherInfoDal" type="BYSJXT.EFDAL.TeacherInfoDal, BYSJXT.EFDAL" singleton="false" >
+  </object>
+
+	<object name="CollegeDal" type="BYSJXT.EFDAL.CollegeDal, BYSJXT.EFDAL" singleton="false" >
+	</object>
+
+	<object name="DepartmentDal" type="BYSJXT.EFDAL.DepartmentDal, BYSJXT.EFDAL" singleton="false" >
+	</object>
+
+	<object name="MajorDal" type="BYSJXT.EFDAL.MajorDal, BYSJXT.EFDAL" singleton="false" >
+	</object>
+
+	<object name="SubjectInfoDal" type="BYSJXT.EFDAL.SubjectInfoDal, BYSJXT.EFDAL" singleton="false" >
+	</object>
+
+	<object name="ScheduleDal" type="BYSJXT.EFDAL.ScheduleDal, BYSJXT.EFDAL" singleton="false" >
+	</object>
+
+	<object name="StudentInfoDal" type="BYSJXT.EFDAL.StudentInfoDal, BYSJXT.EFDAL" singleton="false" >
+	</object>
+
+	<object name="ClassDal" type="BYSJXT.EFDAL.ClassDal, BYSJXT.EFDAL" singleton="false" >
+	</object>
+
+	<object name="StudentSubjectDal" type="BYSJXT.EFDAL.StudentSubjectDal, BYSJXT.EFDAL" singleton="false" >
+	</object>
+
+	<object name="OpeningReportDal" type="BYSJXT.EFDAL.OpeningReportDal, BYSJXT.EFDAL" singleton="false" >
+	</object>
+
+	<object name="NoticeDal" type="BYSJXT.EFDAL.NoticeDal, BYSJXT.EFDAL" singleton="false" >
+	</object>
+
+	<object name="TranslationDal" type="BYSJXT.EFDAL.TranslationDal, BYSJXT.EFDAL" singleton="false" >
+	</object>
+
+	<object name="CommentDal" type="BYSJXT.EFDAL.CommentDal, BYSJXT.EFDAL" singleton="false" >
+	</object>
+
+
+
+</objects>

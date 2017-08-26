@@ -1,0 +1,13 @@
+D:\ASP.NETProject\BYSJXT\BYSJXT.EFDAL\bin\Debug\BYSJXT.EFDAL.dll
+D:\ASP.NETProject\BYSJXT\BYSJXT.EFDAL\bin\Debug\BYSJXT.EFDAL.pdb
+D:\ASP.NETProject\BYSJXT\BYSJXT.EFDAL\bin\Debug\BYSJXT.Common.dll
+D:\ASP.NETProject\BYSJXT\BYSJXT.EFDAL\bin\Debug\BYSJXT.IDAL.dll
+D:\ASP.NETProject\BYSJXT\BYSJXT.EFDAL\bin\Debug\EntityFramework.dll
+D:\ASP.NETProject\BYSJXT\BYSJXT.EFDAL\bin\Debug\BYSJXT.Common.pdb
+D:\ASP.NETProject\BYSJXT\BYSJXT.EFDAL\bin\Debug\BYSJXT.IDAL.pdb
+D:\ASP.NETProject\BYSJXT\BYSJXT.EFDAL\bin\Debug\EntityFramework.xml
+D:\ASP.NETProject\BYSJXT\BYSJXT.EFDAL\obj\Debug\BYSJXT.EFDAL.csprojResolveAssemblyReference.cache
+D:\ASP.NETProject\BYSJXT\BYSJXT.EFDAL\obj\Debug\BYSJXT.EFDAL.dll
+D:\ASP.NETProject\BYSJXT\BYSJXT.EFDAL\obj\Debug\BYSJXT.EFDAL.pdb
+D:\ASP.NETProject\BYSJXT\BYSJXT.EFDAL\bin\Debug\BYSJXT.Model.dll
+D:\ASP.NETProject\BYSJXT\BYSJXT.EFDAL\bin\Debug\BYSJXT.Model.pdb

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net" default-autowire="constructor">
+
+  <object name="TeacherInfoService" type="BYSJXT.BLL.TeacherInfoService, BYSJXT.BLL" singleton="false" >
+	  <property name="TeacherInfoDal" ref="TeacherInfoDal" />
+  </object>
+
+	<object name="CollegeService" type="BYSJXT.BLL.CollegeService, BYSJXT.BLL" singleton="false" >
+		<property name="CollegeDal" ref="CollegeDal" />
+	</object>
+
+	<object name="DepartmentService" type="BYSJXT.BLL.DepartmentService, BYSJXT.BLL" singleton="false" >
+		<property name="DepartmentDal" ref="DepartmentDal" />
+	</object>
+
+	<object name="MajorService" type="BYSJXT.BLL.MajorService, BYSJXT.BLL" singleton="false" >
+		<property name="MajorDal" ref="MajorDal" />
+	</object>
+
+	<object name="SubjectInfoService" type="BYSJXT.BLL.SubjectInfoService, BYSJXT.BLL" singleton="false" >
+		<property name="SubjectInfoDal" ref="SubjectInfoDal" />
+	</object>
+
+	<object name="ScheduleService" type="BYSJXT.BLL.ScheduleService, BYSJXT.BLL" singleton="false" >
+		<property name="ScheduleDal" ref="ScheduleDal" />
+	</object>
+
+	<object name="StudentInfoService" type="BYSJXT.BLL.StudentInfoService, BYSJXT.BLL" singleton="false" >
+		<property name="StudentInfoDal" ref="StudentInfoDal" />
+	</object>
+
+	<object name="ClassService" type="BYSJXT.BLL.ClassService, BYSJXT.BLL" singleton="false" >
+		<property name="ClassDal" ref="ClassDal" />
+	</object>
+
+	<object name="StudentSubjectService" type="BYSJXT.BLL.StudentSubjectService, BYSJXT.BLL" singleton="false" >
+		<property name="StudentSubjectDal" ref="StudentSubjectDal" />
+	</object>
+
+	<object name="OpeningReportService" type="BYSJXT.BLL.OpeningReportService, BYSJXT.BLL" singleton="false" >
+		<property name="OpeningReportDal" ref="OpeningReportDal" />
+	</object>
+
+	<object name="NoticeService" type="BYSJXT.BLL.NoticeService, BYSJXT.BLL" singleton="false" >
+		<property name="NoticeDal" ref="NoticeDal" />
+	</object>
+
+	<object name="TranslationService" type="BYSJXT.BLL.TranslationService, BYSJXT.BLL" singleton="false" >
+		<property name="TranslationDal" ref="TranslationDal" />
+	</object>
+
+	<object name="CommentService" type="BYSJXT.BLL.CommentService, BYSJXT.BLL" singleton="false" >
+		<property name="CommentDal" ref="CommentDal" />
+	</object>
+
+
+
+</objects>

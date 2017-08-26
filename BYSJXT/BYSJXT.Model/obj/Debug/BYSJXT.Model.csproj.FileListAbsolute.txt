@@ -1,0 +1,7 @@
+D:\ASP.NETProject\BYSJXT\BYSJXT.Model\bin\Debug\BYSJXT.Model.dll
+D:\ASP.NETProject\BYSJXT\BYSJXT.Model\bin\Debug\BYSJXT.Model.pdb
+D:\ASP.NETProject\BYSJXT\BYSJXT.Model\bin\Debug\EntityFramework.dll
+D:\ASP.NETProject\BYSJXT\BYSJXT.Model\bin\Debug\EntityFramework.xml
+D:\ASP.NETProject\BYSJXT\BYSJXT.Model\obj\Debug\BYSJXT.Model.dll
+D:\ASP.NETProject\BYSJXT\BYSJXT.Model\obj\Debug\BYSJXT.Model.pdb
+D:\ASP.NETProject\BYSJXT\BYSJXT.Model\obj\Debug\BYSJXT.Model.csprojResolveAssemblyReference.cache

@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{861B5ECD-BB1A-4554-9CEB-B8B076E7065A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BYSJXT.Common</RootNamespace>
+    <AssemblyName>BYSJXT.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Md5Helper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="EF5\Content\App.config.transform" />
+    <None Include="EF5\Content\Web.config.transform" />
+    <None Include="EF5\EntityFramework.5.0.0.nupkg" />
+    <None Include="EF5\EntityFramework.5.0.0.nuspec" />
+    <None Include="EF5\tools\EntityFramework.PS3.psd1" />
+    <None Include="EF5\tools\EntityFramework.psd1" />
+    <None Include="EF5\tools\EntityFramework.psm1" />
+    <None Include="EF5\tools\init.ps1" />
+    <None Include="EF5\tools\install.ps1" />
+    <None Include="EF5\tools\Redirect.config" />
+    <None Include="EF5\tools\Redirect.VS11.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EF5\lib\net40\EntityFramework.dll" />
+    <Content Include="EF5\lib\net40\EntityFramework.xml" />
+    <Content Include="EF5\lib\net45\EntityFramework.dll" />
+    <Content Include="EF5\lib\net45\EntityFramework.xml" />
+    <Content Include="EF5\tools\about_EntityFramework.help.txt" />
+    <Content Include="EF5\tools\EntityFramework.PowerShell.dll" />
+    <Content Include="EF5\tools\EntityFramework.PowerShell.Utility.dll" />
+    <Content Include="EF5\tools\migrate.exe" />
+    <Content Include="spring.net\release\Common.Logging.dll" />
+    <Content Include="spring.net\release\Spring.Aop.dll" />
+    <Content Include="spring.net\release\Spring.Aop.pdb" />
+    <Content Include="spring.net\release\Spring.Aop.xml" />
+    <Content Include="spring.net\release\Spring.Core.dll" />
+    <Content Include="spring.net\release\Spring.Core.pdb" />
+    <Content Include="spring.net\release\Spring.Core.xml" />
+    <Content Include="spring.net\release\Spring.Data.dll" />
+    <Content Include="spring.net\release\Spring.Data.NHibernate32.dll" />
+    <Content Include="spring.net\release\Spring.Data.NHibernate32.Integration.Tests.dll" />
+    <Content Include="spring.net\release\Spring.Data.NHibernate32.Integration.Tests.pdb" />
+    <Content Include="spring.net\release\Spring.Data.NHibernate32.Integration.Tests.xml" />
+    <Content Include="spring.net\release\Spring.Data.NHibernate32.pdb" />
+    <Content Include="spring.net\release\Spring.Data.NHibernate32.Tests.dll" />
+    <Content Include="spring.net\release\Spring.Data.NHibernate32.Tests.dll-TestResults.xml" />
+    <Content Include="spring.net\release\Spring.Data.NHibernate32.Tests.pdb" />
+    <Content Include="spring.net\release\Spring.Data.NHibernate32.Tests.xml" />
+    <Content Include="spring.net\release\Spring.Data.NHibernate32.xml" />
+    <Content Include="spring.net\release\Spring.Data.NHibernate33.dll" />
+    <Content Include="spring.net\release\Spring.Data.NHibernate33.Integration.Tests.dll" />
+    <Content Include="spring.net\release\Spring.Data.NHibernate33.Integration.Tests.pdb" />
+    <Content Include="spring.net\release\Spring.Data.NHibernate33.Integration.Tests.xml" />
+    <Content Include="spring.net\release\Spring.Data.NHibernate33.pdb" />
+    <Content Include="spring.net\release\Spring.Data.NHibernate33.Tests.dll" />
+    <Content Include="spring.net\release\Spring.Data.NHibernate33.Tests.dll-TestResults.xml" />
+    <Content Include="spring.net\release\Spring.Data.NHibernate33.Tests.pdb" />
+    <Content Include="spring.net\release\Spring.Data.NHibernate33.Tests.xml" />
+    <Content Include="spring.net\release\Spring.Data.NHibernate33.xml" />
+    <Content Include="spring.net\release\Spring.Data.pdb" />
+    <Content Include="spring.net\release\Spring.Data.xml" />
+    <Content Include="spring.net\release\Spring.Messaging.dll" />
+    <Content Include="spring.net\release\Spring.Messaging.Ems.dll" />
+    <Content Include="spring.net\release\Spring.Messaging.Ems.pdb" />
+    <Content Include="spring.net\release\Spring.Messaging.Ems.xml" />
+    <Content Include="spring.net\release\Spring.Messaging.Nms.dll" />
+    <Content Include="spring.net\release\Spring.Messaging.Nms.pdb" />
+    <Content Include="spring.net\release\Spring.Messaging.Nms.xml" />
+    <Content Include="spring.net\release\Spring.Messaging.pdb" />
+    <Content Include="spring.net\release\Spring.Messaging.xml" />
+    <Content Include="spring.net\release\Spring.Scheduling.Quartz20.dll" />
+    <Content Include="spring.net\release\Spring.Scheduling.Quartz20.pdb" />
+    <Content Include="spring.net\release\Spring.Scheduling.Quartz20.xml" />
+    <Content Include="spring.net\release\Spring.Services.dll" />
+    <Content Include="spring.net\release\Spring.Services.pdb" />
+    <Content Include="spring.net\release\Spring.Services.xml" />
+    <Content Include="spring.net\release\Spring.Template.Velocity.dll" />
+    <Content Include="spring.net\release\Spring.Template.Velocity.pdb" />
+    <Content Include="spring.net\release\Spring.Template.Velocity.xml" />
+    <Content Include="spring.net\release\Spring.Testing.Microsoft.dll" />
+    <Content Include="spring.net\release\Spring.Testing.Microsoft.pdb" />
+    <Content Include="spring.net\release\Spring.Testing.Microsoft.xml" />
+    <Content Include="spring.net\release\Spring.Testing.NUnit.dll" />
+    <Content Include="spring.net\release\Spring.Testing.NUnit.pdb" />
+    <Content Include="spring.net\release\Spring.Testing.NUnit.xml" />
+    <Content Include="spring.net\release\Spring.Web.dll" />
+    <Content Include="spring.net\release\Spring.Web.Extensions.dll" />
+    <Content Include="spring.net\release\Spring.Web.Extensions.pdb" />
+    <Content Include="spring.net\release\Spring.Web.Extensions.xml" />
+    <Content Include="spring.net\release\Spring.Web.Mvc.dll" />
+    <Content Include="spring.net\release\Spring.Web.Mvc.pdb" />
+    <Content Include="spring.net\release\Spring.Web.Mvc.xml" />
+    <Content Include="spring.net\release\Spring.Web.Mvc3.dll" />
+    <Content Include="spring.net\release\Spring.Web.Mvc3.pdb" />
+    <Content Include="spring.net\release\Spring.Web.Mvc3.xml" />
+    <Content Include="spring.net\release\Spring.Web.Mvc4.dll" />
+    <Content Include="spring.net\release\Spring.Web.Mvc4.pdb" />
+    <Content Include="spring.net\release\Spring.Web.Mvc4.xml" />
+    <Content Include="spring.net\release\Spring.Web.pdb" />
+    <Content Include="spring.net\release\Spring.Web.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

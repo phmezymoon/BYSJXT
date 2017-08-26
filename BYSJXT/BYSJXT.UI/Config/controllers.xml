@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net" default-autowire="constructor">
+
+  <object type="BYSJXT.UI.Controllers.TestController, BYSJXT.UI" singleton="false" >
+    <property name="TeacherInfoService" ref="TeacherInfoService" />
+  </object>
+
+	<object type="BYSJXT.UI.Controllers.LoginController, BYSJXT.UI" singleton="false" >
+		<property name="TeacherInfoService" ref="TeacherInfoService" />
+	</object>
+
+	<object type="BYSJXT.UI.Controllers.SelectedSubjectController, BYSJXT.UI" singleton="false" >
+		<property name="CollegeService" ref="CollegeService" />
+		<property name="DepartmentService" ref="DepartmentService" />
+		<property name="MajorService" ref="MajorService" />
+		<property name="ClassService" ref="ClassService" />
+		<property name="TeacherInfoService" ref="TeacherInfoService" />
+		<property name="SubjectInfoService" ref="SubjectInfoService" />
+		<property name="ScheduleService" ref="ScheduleService" />
+		<property name="StudentInfoService" ref="StudentInfoService" />
+		<property name="StudentSubjectService" ref="StudentSubjectService" />
+	</object>
+
+	<object type="BYSJXT.UI.Controllers.ProcessMonitorController, BYSJXT.UI" singleton="false" >
+		<property name="StudentSubjectService" ref="StudentSubjectService" />
+		<property name="ScheduleService" ref="ScheduleService" />
+		<property name="OpeningReportService" ref="OpeningReportService" />
+		<property name="TranslationService" ref="TranslationService" />
+		<property name="CommentService" ref="CommentService" />
+	</object>
+
+	<object type="BYSJXT.UI.Controllers.InfoReleaseController, BYSJXT.UI" singleton="false" >
+		<property name="NoticeService" ref="NoticeService" />
+	</object>
+
+	<object type="BYSJXT.UI.Controllers.SysMaintainController, BYSJXT.UI" singleton="false" >
+		<property name="DepartmentService" ref="DepartmentService" />
+		<property name="TeacherInfoService" ref="TeacherInfoService" />
+		<property name="ClassService" ref="ClassService" />
+		<property name="StudentInfoService" ref="StudentInfoService" />
+	</object>
+
+
+
+ 
+
+
+
+</objects>

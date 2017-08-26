@@ -1,0 +1,4 @@
+D:\ASP.NETProject\BYSJXT\BYSJXT.Common\bin\Debug\BYSJXT.Common.dll
+D:\ASP.NETProject\BYSJXT\BYSJXT.Common\bin\Debug\BYSJXT.Common.pdb
+D:\ASP.NETProject\BYSJXT\BYSJXT.Common\obj\Debug\BYSJXT.Common.dll
+D:\ASP.NETProject\BYSJXT\BYSJXT.Common\obj\Debug\BYSJXT.Common.pdb
